@@ -13170,7 +13170,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -13287,7 +13287,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Total number of records</span>
@@ -13378,7 +13378,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split the data into features and target label</span>
@@ -13427,7 +13427,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Log-transform the skewed features</span>
@@ -13477,7 +13477,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import sklearn.preprocessing.StandardScaler</span>
@@ -13689,7 +13689,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: One-hot encode the &#39;features_log_minmax_transform&#39; data using pandas.get_dummies()</span>
@@ -13742,7 +13742,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import train_test_split</span>
@@ -13840,7 +13840,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
@@ -13852,17 +13852,19 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <span class="sd">FN = 0 # No predicted negatives in the naive case</span>
 <span class="sd">&#39;&#39;&#39;</span>
 
-<span class="n">TP</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">income</span><span class="p">);</span>
-<span class="n">FP</span> <span class="o">=</span> <span class="n">income</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">-</span> <span class="n">TP</span>
-<span class="n">TN</span> <span class="o">=</span><span class="mi">0</span>
-<span class="n">FN</span><span class="o">=</span><span class="mi">0</span>
-<span class="c1"># TODO: Calculate accuracy, precision and recall</span>
-<span class="n">accuracy</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">TP</span><span class="o">/</span><span class="n">income</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
-<span class="n">recall</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">TP</span><span class="o">/</span><span class="n">TP</span><span class="o">+</span><span class="n">FN</span><span class="p">)</span>
-<span class="n">precision</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">TP</span><span class="o">/</span><span class="n">TP</span><span class="o">+</span><span class="n">FP</span><span class="p">)</span>
+<span class="n">TP</span> <span class="o">=</span> <span class="n">income</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">FP</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">income</span><span class="p">)</span> <span class="o">-</span> <span class="n">income</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">TN</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">FN</span> <span class="o">=</span> <span class="mf">0.0</span>
 
-<span class="c1"># TODO: Calculate F-score using the formula above for beta = 0.5 and correct values for precision and recall.</span>
-<span class="n">fscore</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">*</span><span class="mf">0.5</span><span class="o">*</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">precision</span><span class="o">*</span><span class="n">recall</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">precision</span><span class="p">)</span> <span class="o">*</span> <span class="n">recall</span><span class="p">)</span>
+<span class="c1"># Calculate accuracy, precision and recall</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">TP</span> <span class="o">/</span> <span class="n">n_records</span>
+<span class="n">recall</span> <span class="o">=</span> <span class="n">TP</span> <span class="o">/</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">FN</span><span class="p">)</span> 
+<span class="n">precision</span> <span class="o">=</span> <span class="n">TP</span> <span class="o">/</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">FP</span><span class="p">)</span>
+
+<span class="c1"># Calculate F-score using the formula above for beta = 0.5 and correct values for precision and recall.</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">fscore</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">beta</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">precision</span> <span class="o">*</span> <span class="n">recall</span> <span class="o">/</span> <span class="p">((</span><span class="n">beta</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">precision</span><span class="p">)</span> <span class="o">+</span> <span class="n">recall</span><span class="p">)</span>
 
 <span class="c1"># Print the results </span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Naive Predictor: [Accuracy score: </span><span class="si">{:.4f}</span><span class="s2">, F-score: </span><span class="si">{:.4f}</span><span class="s2">]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy</span><span class="p">,</span> <span class="n">fscore</span><span class="p">))</span>
@@ -13882,7 +13884,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Naive Predictor: [Accuracy score: 0.2478, F-score: 1.0000]
+<pre>Naive Predictor: [Accuracy score: 0.2478, F-score: 0.2917]
 </pre>
 </div>
 </div>
@@ -14017,7 +14019,7 @@ In the code block below, you will need to implement the following:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Import two metrics from sklearn - fbeta_score and accuracy_score</span>
@@ -14037,7 +14039,7 @@ In the code block below, you will need to implement the following:</p>
     
     <span class="c1"># TODO: Fit the learner to the training data using slicing with &#39;sample_size&#39; using .fit(training_features[:], training_labels[:])</span>
     <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span> <span class="c1"># Get start time</span>
-    <span class="n">learner</span> <span class="o">=</span> <span class="n">learner</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">learner</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">[:</span><span class="n">sample_size</span><span class="p">],</span> <span class="n">y_train</span><span class="p">[:</span><span class="n">sample_size</span><span class="p">])</span>
     <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span> <span class="c1"># Get end time</span>
     
     <span class="c1"># TODO: Calculate the training time</span>
@@ -14213,7 +14215,8 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-the best model for this data is Gradient Boosting Classifier. GradientBoostingClassifier is good in accuracy, F_score and less time in predicting the modal.</p>
+It seems to me that the best method to solve this problem is the Gradient Boosting Classifier. Besides achieving the best accuracy and f-score, it also can be trained in a reasonable amount of time too. It's also interesting to see that Gaussian Naive Bayes performs extremely bad on our dataset compared to the other models. Although it is the fastest one to train, the model is not competitive if we consider accuracy / f-score. SVC does also perform very nicely in terms of accuracy / f-score, but it takes significantly more time to train than the Gradient Boosting Classifier.</p>
+<p>When taking all these attributes into account, we can conclude that the Gradient Descent Boosting Classifier is the best classifier for our problem. Due to its fast training we will be able to fully utilize the entire dataset and therefore maximize the performance on unseen data. Additionally, it already has the best accuracy without further parameter tuning.</p>
 
 </div>
 </div>
@@ -14234,7 +14237,7 @@ the best model for this data is Gradient Boosting Classifier. GradientBoostingCl
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong> 
-GradientBoosting classifier have high accuracy compared all other algorithms. Its predicts the data very well.
+Gradient descent is the ensemble based machine learning technique. Its the combination of many so called weak learners to become a strong learner. For example each weak learners error piped to another learner out of it will create the strong learner.
 <a href="https://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/">https://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/</a></p>
 
 </div>
@@ -14266,7 +14269,7 @@ GradientBoosting classifier have high accuracy compared all other algorithms. It
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Import &#39;GridSearchCV&#39;, &#39;make_scorer&#39;, and any other necessary libraries</span>
@@ -14356,16 +14359,17 @@ GradientBoosting classifier have high accuracy compared all other algorithms. It
 [CV] max_depth=2, min_samples_leaf=3, n_estimators=200 ...............
 [CV] max_depth=2, min_samples_leaf=3, n_estimators=200 ...............
 [CV] max_depth=2, min_samples_leaf=5, n_estimators=100 ...............
-[CV]  max_depth=2, min_samples_leaf=3, n_estimators=100, score=0.7398381060144487, total=  45.7s
+[CV]  max_depth=2, min_samples_leaf=3, n_estimators=100, score=0.7398381060144487, total=  44.8s
 [CV] max_depth=2, min_samples_leaf=5, n_estimators=100 ...............
-[CV]  max_depth=2, min_samples_leaf=3, n_estimators=100, score=0.7342125285315749, total=  46.1s
-[CV]  max_depth=2, min_samples_leaf=3, n_estimators=100, score=0.7347447073474471, total=  46.2s
+[CV]  max_depth=2, min_samples_leaf=3, n_estimators=100, score=0.7347447073474471, total=  45.3s
+[CV]  max_depth=2, min_samples_leaf=3, n_estimators=100, score=0.7342125285315749, total=  45.4s
 [CV] max_depth=2, min_samples_leaf=5, n_estimators=100 ...............
 [CV] max_depth=2, min_samples_leaf=5, n_estimators=150 ...............
-[CV]  max_depth=2, min_samples_leaf=5, n_estimators=100, score=0.7353066258399252, total=  45.6s
+[CV]  max_depth=2, min_samples_leaf=5, n_estimators=100, score=0.7353066258399252, total=  44.8s
 [CV] max_depth=2, min_samples_leaf=5, n_estimators=150 ...............
-[CV]  max_depth=2, min_samples_leaf=3, n_estimators=150, score=0.7385572750347991, total= 1.1min
+[CV]  max_depth=2, min_samples_leaf=3, n_estimators=150, score=0.7396690846849784, total= 1.1min
 [CV] max_depth=2, min_samples_leaf=5, n_estimators=150 ...............
+[CV]  max_depth=2, min_samples_leaf=3, n_estimators=150, score=0.7421776165977904, total= 1.1min
 </pre>
 </div>
 </div>
@@ -14387,19 +14391,18 @@ GradientBoosting classifier have high accuracy compared all other algorithms. It
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  max_depth=2, min_samples_leaf=3, n_estimators=150, score=0.7396690846849784, total= 1.1min
-[CV] max_depth=2, min_samples_leaf=5, n_estimators=200 ...............
-[CV]  max_depth=2, min_samples_leaf=3, n_estimators=150, score=0.7421776165977904, total= 1.1min
-[CV] max_depth=2, min_samples_leaf=5, n_estimators=200 ...............
-[CV]  max_depth=2, min_samples_leaf=3, n_estimators=200, score=0.7427463024327163, total= 1.4min
+<pre>[CV] max_depth=2, min_samples_leaf=5, n_estimators=200 ...............
+[CV]  max_depth=2, min_samples_leaf=3, n_estimators=150, score=0.7385572750347991, total= 1.1min
 [CV] max_depth=2, min_samples_leaf=5, n_estimators=200 ...............
 [CV]  max_depth=2, min_samples_leaf=3, n_estimators=200, score=0.741035223026159, total= 1.4min
+[CV] max_depth=2, min_samples_leaf=5, n_estimators=200 ...............
+[CV]  max_depth=2, min_samples_leaf=3, n_estimators=200, score=0.7427463024327163, total= 1.4min
 [CV] max_depth=2, min_samples_leaf=10, n_estimators=100 ..............
 [CV]  max_depth=2, min_samples_leaf=3, n_estimators=200, score=0.7462933819266131, total= 1.4min
 [CV] max_depth=2, min_samples_leaf=10, n_estimators=100 ..............
-[CV]  max_depth=2, min_samples_leaf=5, n_estimators=100, score=0.738849611591167, total=  46.2s
+[CV]  max_depth=2, min_samples_leaf=5, n_estimators=100, score=0.738849611591167, total=  46.6s
 [CV] max_depth=2, min_samples_leaf=10, n_estimators=100 ..............
-[CV]  max_depth=2, min_samples_leaf=5, n_estimators=100, score=0.7332162862636903, total=  46.9s
+[CV]  max_depth=2, min_samples_leaf=5, n_estimators=100, score=0.7332162862636903, total=  47.1s
 [CV] max_depth=2, min_samples_leaf=10, n_estimators=150 ..............
 </pre>
 </div>
@@ -14428,17 +14431,17 @@ GradientBoosting classifier have high accuracy compared all other algorithms. It
 [CV] max_depth=2, min_samples_leaf=10, n_estimators=150 ..............
 [CV]  max_depth=2, min_samples_leaf=5, n_estimators=150, score=0.7435226601400963, total= 1.1min
 [CV] max_depth=2, min_samples_leaf=10, n_estimators=200 ..............
-[CV]  max_depth=2, min_samples_leaf=10, n_estimators=100, score=0.734958111195735, total=  46.5s
+[CV]  max_depth=2, min_samples_leaf=10, n_estimators=100, score=0.734958111195735, total=  44.1s
 [CV] max_depth=2, min_samples_leaf=10, n_estimators=200 ..............
-[CV]  max_depth=2, min_samples_leaf=10, n_estimators=100, score=0.734006172324631, total=  47.1s
+[CV]  max_depth=2, min_samples_leaf=10, n_estimators=100, score=0.734006172324631, total=  44.6s
 [CV] max_depth=2, min_samples_leaf=10, n_estimators=200 ..............
-[CV]  max_depth=2, min_samples_leaf=10, n_estimators=100, score=0.7396347269107593, total=  46.0s
+[CV]  max_depth=2, min_samples_leaf=10, n_estimators=100, score=0.7396347269107593, total=  43.7s
 [CV] max_depth=4, min_samples_leaf=3, n_estimators=100 ...............
-[CV]  max_depth=2, min_samples_leaf=5, n_estimators=200, score=0.7425461044763995, total= 1.4min
+[CV]  max_depth=2, min_samples_leaf=5, n_estimators=200, score=0.7425461044763995, total= 1.3min
 [CV] max_depth=4, min_samples_leaf=3, n_estimators=100 ...............
-[CV]  max_depth=2, min_samples_leaf=5, n_estimators=200, score=0.7402980317156745, total= 1.4min
+[CV]  max_depth=2, min_samples_leaf=5, n_estimators=200, score=0.7402980317156745, total= 1.3min
 [CV] max_depth=4, min_samples_leaf=3, n_estimators=100 ...............
-[CV]  max_depth=2, min_samples_leaf=10, n_estimators=150, score=0.7391196630605336, total= 1.1min
+[CV]  max_depth=2, min_samples_leaf=10, n_estimators=150, score=0.7391196630605336, total= 1.0min
 [CV] max_depth=4, min_samples_leaf=3, n_estimators=150 ...............
 </pre>
 </div>
@@ -14450,337 +14453,7 @@ GradientBoosting classifier have high accuracy compared all other algorithms. It
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=10)]: Done  21 tasks      | elapsed:  2.7min
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  max_depth=2, min_samples_leaf=5, n_estimators=200, score=0.746132848043676, total= 1.4min
-[CV] max_depth=4, min_samples_leaf=3, n_estimators=150 ...............
-[CV]  max_depth=2, min_samples_leaf=10, n_estimators=150, score=0.7387980808327235, total= 1.1min
-[CV] max_depth=4, min_samples_leaf=3, n_estimators=150 ...............
-[CV]  max_depth=2, min_samples_leaf=10, n_estimators=150, score=0.7414914280888437, total= 1.1min
-[CV] max_depth=4, min_samples_leaf=3, n_estimators=200 ...............
-[CV]  max_depth=2, min_samples_leaf=10, n_estimators=200, score=0.7428757002516846, total= 1.4min
-[CV] max_depth=4, min_samples_leaf=3, n_estimators=200 ...............
-[CV]  max_depth=2, min_samples_leaf=10, n_estimators=200, score=0.7413587604290823, total= 1.4min
-[CV]  max_depth=2, min_samples_leaf=10, n_estimators=200, score=0.7486941381311667, total= 1.4min
-[CV] max_depth=4, min_samples_leaf=3, n_estimators=200 ...............
-[CV] max_depth=4, min_samples_leaf=5, n_estimators=100 ...............
-[CV]  max_depth=4, min_samples_leaf=3, n_estimators=100, score=0.7516725698543881, total= 2.3min
-[CV] max_depth=4, min_samples_leaf=5, n_estimators=100 ...............
-[CV]  max_depth=4, min_samples_leaf=3, n_estimators=100, score=0.7583205737770972, total= 2.3min
-[CV] max_depth=4, min_samples_leaf=5, n_estimators=100 ...............
-[CV]  max_depth=4, min_samples_leaf=3, n_estimators=100, score=0.7468752396288628, total= 2.3min
-[CV] max_depth=4, min_samples_leaf=5, n_estimators=150 ...............
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=10)]: Done  30 tasks      | elapsed:  4.9min
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  max_depth=4, min_samples_leaf=3, n_estimators=150, score=0.753014361416174, total= 3.1min
-[CV] max_depth=4, min_samples_leaf=5, n_estimators=150 ...............
-[CV]  max_depth=4, min_samples_leaf=5, n_estimators=100, score=0.7481335952848722, total= 2.3min
-[CV] max_depth=4, min_samples_leaf=5, n_estimators=150 ...............
-[CV]  max_depth=4, min_samples_leaf=3, n_estimators=150, score=0.7477381585949974, total= 3.1min
-[CV] max_depth=4, min_samples_leaf=5, n_estimators=200 ...............
-[CV]  max_depth=4, min_samples_leaf=3, n_estimators=150, score=0.7633889723914247, total= 3.2min
-[CV] max_depth=4, min_samples_leaf=5, n_estimators=200 ...............
-[CV]  max_depth=4, min_samples_leaf=3, n_estimators=200, score=0.7560584053206941, total= 3.9min
-[CV] max_depth=4, min_samples_leaf=5, n_estimators=200 ...............
-[CV]  max_depth=4, min_samples_leaf=5, n_estimators=100, score=0.7491718665742239, total= 2.3min
-[CV] max_depth=4, min_samples_leaf=10, n_estimators=100 ..............
-[CV]  max_depth=4, min_samples_leaf=5, n_estimators=100, score=0.7579048998310403, total= 2.3min
-[CV] max_depth=4, min_samples_leaf=10, n_estimators=100 ..............
-[CV]  max_depth=4, min_samples_leaf=3, n_estimators=200, score=0.7476741547538007, total= 4.0min
-[CV] max_depth=4, min_samples_leaf=10, n_estimators=100 ..............
-[CV]  max_depth=4, min_samples_leaf=3, n_estimators=200, score=0.763677515023804, total= 4.1min
-[CV] max_depth=4, min_samples_leaf=10, n_estimators=150 ..............
-[CV]  max_depth=4, min_samples_leaf=5, n_estimators=150, score=0.7560616624060732, total= 3.1min
-[CV] max_depth=4, min_samples_leaf=10, n_estimators=150 ..............
-[CV]  max_depth=4, min_samples_leaf=5, n_estimators=150, score=0.75077810673347, total= 3.1min
-[CV] max_depth=4, min_samples_leaf=10, n_estimators=150 ..............
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=10)]: Done  41 tasks      | elapsed:  9.0min
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  max_depth=4, min_samples_leaf=5, n_estimators=150, score=0.7628392814750338, total= 3.1min
-[CV] max_depth=4, min_samples_leaf=10, n_estimators=200 ..............
-[CV]  max_depth=4, min_samples_leaf=10, n_estimators=100, score=0.752292140114411, total= 2.3min
-[CV] max_depth=4, min_samples_leaf=10, n_estimators=200 ..............
-[CV]  max_depth=4, min_samples_leaf=10, n_estimators=100, score=0.7493251060547629, total= 2.3min
-[CV] max_depth=4, min_samples_leaf=10, n_estimators=200 ..............
-[CV]  max_depth=4, min_samples_leaf=5, n_estimators=200, score=0.7570651757677873, total= 3.9min
-[CV] max_depth=6, min_samples_leaf=3, n_estimators=100 ...............
-[CV]  max_depth=4, min_samples_leaf=10, n_estimators=100, score=0.7566658659620465, total= 2.3min
-[CV] max_depth=6, min_samples_leaf=3, n_estimators=100 ...............
-[CV]  max_depth=4, min_samples_leaf=5, n_estimators=200, score=0.7497916193074183, total= 4.0min
-[CV] max_depth=6, min_samples_leaf=3, n_estimators=100 ...............
-[CV]  max_depth=4, min_samples_leaf=10, n_estimators=150, score=0.7533297405496959, total= 3.1min
-[CV] max_depth=6, min_samples_leaf=3, n_estimators=150 ...............
-[CV]  max_depth=4, min_samples_leaf=5, n_estimators=200, score=0.7616466336711448, total= 4.0min
-[CV] max_depth=6, min_samples_leaf=3, n_estimators=150 ...............
-[CV]  max_depth=4, min_samples_leaf=10, n_estimators=150, score=0.7508597630875048, total= 3.1min
-[CV] max_depth=6, min_samples_leaf=3, n_estimators=150 ...............
-[CV]  max_depth=4, min_samples_leaf=10, n_estimators=150, score=0.7596039603960396, total= 3.1min
-[CV] max_depth=6, min_samples_leaf=3, n_estimators=200 ...............
-[CV]  max_depth=4, min_samples_leaf=10, n_estimators=200, score=0.7563505988252346, total= 3.9min
-[CV] max_depth=6, min_samples_leaf=3, n_estimators=200 ...............
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=10)]: Done  52 tasks      | elapsed: 13.1min
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  max_depth=4, min_samples_leaf=10, n_estimators=200, score=0.7504747436384352, total= 3.9min
-[CV] max_depth=6, min_samples_leaf=3, n_estimators=200 ...............
-[CV]  max_depth=4, min_samples_leaf=10, n_estimators=200, score=0.7590926867422761, total= 4.0min
-[CV] max_depth=6, min_samples_leaf=5, n_estimators=100 ...............
-[CV]  max_depth=6, min_samples_leaf=3, n_estimators=100, score=0.7491184635006377, total= 4.5min
-[CV] max_depth=6, min_samples_leaf=5, n_estimators=100 ...............
-[CV]  max_depth=6, min_samples_leaf=3, n_estimators=100, score=0.7565614302015975, total= 4.6min
-[CV] max_depth=6, min_samples_leaf=5, n_estimators=100 ...............
-[CV]  max_depth=6, min_samples_leaf=3, n_estimators=100, score=0.7601126672404351, total= 4.5min
-[CV] max_depth=6, min_samples_leaf=5, n_estimators=150 ...............
-[CV]  max_depth=6, min_samples_leaf=3, n_estimators=150, score=0.7464516608456566, total= 6.0min
-[CV] max_depth=6, min_samples_leaf=5, n_estimators=150 ...............
-[CV]  max_depth=6, min_samples_leaf=3, n_estimators=150, score=0.7555739058629232, total= 6.1min
-[CV] max_depth=6, min_samples_leaf=5, n_estimators=150 ...............
-[CV]  max_depth=6, min_samples_leaf=3, n_estimators=150, score=0.7583158874156781, total= 6.1min
-[CV] max_depth=6, min_samples_leaf=5, n_estimators=200 ...............
-[CV]  max_depth=6, min_samples_leaf=5, n_estimators=100, score=0.7545599031257095, total= 4.6min
-[CV] max_depth=6, min_samples_leaf=5, n_estimators=200 ...............
-[CV]  max_depth=6, min_samples_leaf=5, n_estimators=100, score=0.7503200060236428, total= 4.5min
-[CV] max_depth=6, min_samples_leaf=5, n_estimators=200 ...............
-[CV]  max_depth=6, min_samples_leaf=5, n_estimators=100, score=0.7580481721100631, total= 4.6min
-[CV] max_depth=6, min_samples_leaf=10, n_estimators=100 ..............
-[CV]  max_depth=6, min_samples_leaf=3, n_estimators=200, score=0.7522586425744792, total= 7.6min
-[CV] max_depth=6, min_samples_leaf=10, n_estimators=100 ..............
-[CV]  max_depth=6, min_samples_leaf=3, n_estimators=200, score=0.7449877931493674, total= 7.6min
-[CV] max_depth=6, min_samples_leaf=10, n_estimators=100 ..............
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=10)]: Done  65 tasks      | elapsed: 20.8min
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  max_depth=6, min_samples_leaf=5, n_estimators=150, score=0.7516783586030021, total= 6.0min
-[CV] max_depth=6, min_samples_leaf=10, n_estimators=150 ..............
-[CV]  max_depth=6, min_samples_leaf=3, n_estimators=200, score=0.7567027732964585, total= 7.6min
-[CV] max_depth=6, min_samples_leaf=10, n_estimators=150 ..............
-[CV]  max_depth=6, min_samples_leaf=5, n_estimators=150, score=0.749424946204645, total= 6.0min
-[CV] max_depth=6, min_samples_leaf=10, n_estimators=150 ..............
-[CV]  max_depth=6, min_samples_leaf=5, n_estimators=150, score=0.7559073181922459, total= 6.1min
-[CV] max_depth=6, min_samples_leaf=10, n_estimators=200 ..............
-[CV]  max_depth=6, min_samples_leaf=10, n_estimators=100, score=0.7548967304321318, total= 4.5min
-[CV] max_depth=6, min_samples_leaf=10, n_estimators=200 ..............
-[CV]  max_depth=6, min_samples_leaf=10, n_estimators=100, score=0.7488937223430586, total= 4.3min
-[CV] max_depth=6, min_samples_leaf=10, n_estimators=200 ..............
-[CV]  max_depth=6, min_samples_leaf=5, n_estimators=200, score=0.7494920611031681, total= 7.6min
-[CV] max_depth=8, min_samples_leaf=3, n_estimators=100 ...............
-[CV]  max_depth=6, min_samples_leaf=10, n_estimators=100, score=0.7607262006362016, total= 4.5min
-[CV] max_depth=8, min_samples_leaf=3, n_estimators=100 ...............
-[CV]  max_depth=6, min_samples_leaf=5, n_estimators=200, score=0.7506116094595597, total= 7.5min
-[CV] max_depth=8, min_samples_leaf=3, n_estimators=100 ...............
-[CV]  max_depth=6, min_samples_leaf=10, n_estimators=150, score=0.7519109967456293, total= 5.8min
-[CV] max_depth=8, min_samples_leaf=3, n_estimators=150 ...............
-[CV]  max_depth=6, min_samples_leaf=10, n_estimators=150, score=0.7473362640637805, total= 5.7min
-[CV] max_depth=8, min_samples_leaf=3, n_estimators=150 ...............
-[CV]  max_depth=6, min_samples_leaf=5, n_estimators=200, score=0.7551984157209232, total= 7.7min
-[CV] max_depth=8, min_samples_leaf=3, n_estimators=150 ...............
-[CV]  max_depth=6, min_samples_leaf=10, n_estimators=150, score=0.758692148284596, total= 5.9min
-[CV] max_depth=8, min_samples_leaf=3, n_estimators=200 ...............
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=10)]: Done  78 tasks      | elapsed: 29.1min
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  max_depth=6, min_samples_leaf=10, n_estimators=200, score=0.7519759126834777, total= 7.3min
-[CV] max_depth=8, min_samples_leaf=3, n_estimators=200 ...............
-[CV]  max_depth=6, min_samples_leaf=10, n_estimators=200, score=0.745727602278612, total= 7.3min
-[CV] max_depth=8, min_samples_leaf=3, n_estimators=200 ...............
-[CV]  max_depth=6, min_samples_leaf=10, n_estimators=200, score=0.755508119234581, total= 7.3min
-[CV] max_depth=8, min_samples_leaf=5, n_estimators=100 ...............
-[CV]  max_depth=8, min_samples_leaf=3, n_estimators=100, score=0.7485928705440901, total= 7.6min
-[CV] max_depth=8, min_samples_leaf=5, n_estimators=100 ...............
-[CV]  max_depth=8, min_samples_leaf=3, n_estimators=100, score=0.74362026634923, total= 7.8min
-[CV] max_depth=8, min_samples_leaf=5, n_estimators=100 ...............
-[CV]  max_depth=8, min_samples_leaf=3, n_estimators=100, score=0.7539468617635733, total= 7.8min
-[CV] max_depth=8, min_samples_leaf=5, n_estimators=150 ...............
-[CV]  max_depth=8, min_samples_leaf=3, n_estimators=150, score=0.74277391888864, total=10.0min
-[CV] max_depth=8, min_samples_leaf=5, n_estimators=150 ...............
-[CV]  max_depth=8, min_samples_leaf=3, n_estimators=150, score=0.7431585158958471, total=10.3min
-[CV] max_depth=8, min_samples_leaf=5, n_estimators=150 ...............
-[CV]  max_depth=8, min_samples_leaf=3, n_estimators=150, score=0.7489459563050979, total=10.5min
-[CV] max_depth=8, min_samples_leaf=5, n_estimators=200 ...............
-[CV]  max_depth=8, min_samples_leaf=5, n_estimators=100, score=0.7524253591035571, total= 7.3min
-[CV] max_depth=8, min_samples_leaf=5, n_estimators=200 ...............
-[CV]  max_depth=8, min_samples_leaf=5, n_estimators=100, score=0.7438047465748296, total= 7.4min
-[CV] max_depth=8, min_samples_leaf=5, n_estimators=200 ...............
-[CV]  max_depth=8, min_samples_leaf=5, n_estimators=100, score=0.7534035843396661, total= 7.6min
-[CV] max_depth=8, min_samples_leaf=10, n_estimators=100 ..............
-[CV]  max_depth=8, min_samples_leaf=3, n_estimators=200, score=0.7440542757026766, total=12.8min
-[CV] max_depth=8, min_samples_leaf=10, n_estimators=100 ..............
-[CV]  max_depth=8, min_samples_leaf=5, n_estimators=150, score=0.7478680014831295, total= 9.8min
-[CV] max_depth=8, min_samples_leaf=10, n_estimators=100 ..............
-[CV]  max_depth=8, min_samples_leaf=3, n_estimators=200, score=0.7391495924212381, total=13.4min
-[CV] max_depth=8, min_samples_leaf=10, n_estimators=150 ..............
-[CV]  max_depth=8, min_samples_leaf=3, n_estimators=200, score=0.7467458323818225, total=13.2min
-[CV] max_depth=8, min_samples_leaf=10, n_estimators=150 ..............
-[CV]  max_depth=8, min_samples_leaf=5, n_estimators=150, score=0.7431293514107732, total= 9.8min
-[CV] max_depth=8, min_samples_leaf=10, n_estimators=150 ..............
-[CV]  max_depth=8, min_samples_leaf=5, n_estimators=150, score=0.7523918867202449, total= 9.9min
-[CV] max_depth=8, min_samples_leaf=10, n_estimators=200 ..............
-[CV]  max_depth=8, min_samples_leaf=10, n_estimators=100, score=0.7518314326712483, total= 7.2min
-[CV] max_depth=8, min_samples_leaf=10, n_estimators=200 ..............
-[CV]  max_depth=8, min_samples_leaf=10, n_estimators=100, score=0.7443558602190596, total= 7.0min
-[CV] max_depth=8, min_samples_leaf=10, n_estimators=200 ..............
-[CV]  max_depth=8, min_samples_leaf=5, n_estimators=200, score=0.7426291287962757, total=12.6min
-[CV]  max_depth=8, min_samples_leaf=10, n_estimators=100, score=0.7562475970780468, total= 7.0min
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=10)]: Done 100 out of 108 | elapsed: 50.6min remaining:  4.0min
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  max_depth=8, min_samples_leaf=5, n_estimators=200, score=0.7390291827377921, total=12.1min
-[CV]  max_depth=8, min_samples_leaf=5, n_estimators=200, score=0.7485007211720944, total=12.2min
-[CV]  max_depth=8, min_samples_leaf=10, n_estimators=150, score=0.7478584729981379, total= 8.5min
-[CV]  max_depth=8, min_samples_leaf=10, n_estimators=150, score=0.7416586520677666, total= 8.4min
-[CV]  max_depth=8, min_samples_leaf=10, n_estimators=150, score=0.7519969570178776, total= 6.9min
-[CV]  max_depth=8, min_samples_leaf=10, n_estimators=200, score=0.7436909104444278, total= 7.2min
-[CV]  max_depth=8, min_samples_leaf=10, n_estimators=200, score=0.7407270850232284, total= 6.6min
-[CV]  max_depth=8, min_samples_leaf=10, n_estimators=200, score=0.7461555942731611, total= 5.6min
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=10)]: Done 108 out of 108 | elapsed: 54.7min finished
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Unoptimized model
-------
-Accuracy score on testing data: 0.8630
-F-score on testing data: 0.7395
-
-Optimized Model
-------
-Final accuracy score on the testing data: 0.8687
-Final F-score on the testing data: 0.7480
+<pre>[Parallel(n_jobs=10)]: Done  21 tasks      | elapsed:  2.6min
 </pre>
 </div>
 </div>
